@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor postman as p
+participant 认证服务 as a
+database MySQL as m
+database Redis as r
+
+p -> a++
+a -> m++
+return 用户名密码权限
+a -> a: 认证
+a -> a: 生成 jwt-token
+a -> r++: 存 jwt-token
+return
+a -> r++: 存当前用户所具有的所有权限
+return
+return jwt-token
+
+@enduml
+
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor postman as p
+participant "JwtFilter" as f
+database Redis as r
+participant "FilterSecurityInterceptor" as i
+participant "RestController" as c
+
+p -> f++
+f -> f: 从请求头中取出 jwt-token
+f -> f: jwt-token 中取出 username
+f -> r++: 删除 jwt-token
+return 删除成功
+
+f-> r++: 查询权限
+return username 的所有权限
+
+f->f: 构造 authentication-token
+
+f->i: 放行请求
+i->i: 鉴权
+i->c: 放行
+return
+
+@enduml
+

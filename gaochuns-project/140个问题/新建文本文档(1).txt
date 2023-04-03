@@ -1,0 +1,187 @@
+1、
+
+饿汉式：对象提前创建好；懒汉式：对象在使用的时候创建
+
+饿汉式是线程安全的，懒汉式是线程不安全的
+
+懒汉式解决线程安全问题，加锁
+
+public class Singleton {
+private static Singleton instance;
+
+public static Singleton getInstance() {
+//为了提高性能
+if (instance==null){
+//解决多线程安全问题
+synchronized (Singleton.class){
+if (instance==null){
+instance = new Singleton();
+}
+}
+}
+return instance;
+}
+
+
+
+2、
+
+第⼀次握⼿：客户端发送⽹络包，服务端收到了。这样服务端就能得出结论：客户端的发送能⼒、服务端的接收能 ⼒是正常的。
+
+第⼆次握⼿：服务端发包，客户端收到了。这样客户端就能得出结论：服务端的接收、发送能⼒，客户端的接收、发送能⼒是正常的。不过此时服务器并不能确认客户端的接收能⼒是否正常。
+
+第三次握⼿：客户端发包，服务端收到了。这样服务端就能得出结论：客户端的接收、发送能⼒正常，服务器⾃⼰的发送、接收能⼒也正常。 因此，需要三次握⼿才能确认双⽅的接收与发送能⼒是否正常
+
+
+
+3、
+
+拉取模式：客户端可以连续调用basicGet方法拉取多余消息，处理完成之后一次性ACK。
+
+
+
+4、
+
+NullPointerException：当应⽤程序试图访问空对象时，则抛出该异常。
+
+SQLException：提供关于数据库访问错误或其他错误信息的异常。
+
+IndexOutOfBoundsException：指示某排序索引（例如对数组、字符串或向量的排序）超出范围时抛出。
+
+FileNotFoundException：当试图打开指定路径名表示的⽂件失败时，抛出此异常。
+
+IOException：当发⽣某种 I/O 异常时，抛出此异常。此类是失败或中断的 I/O 操作⽣成的异常的通⽤类。
+
+ClassCastException：当试图将对象强制转换为不是实例的⼦类时，抛出该异常。
+
+IllegalArgumentException：抛出的异常表明向⽅法传递了⼀个不合法或不正确的参数。
+
+
+
+5、
+
+Eureka 是一个 jar 包，它不能独立运行，Nacos是独立的产品，可以独立运行。
+
+Eureka 只能提供服务注册与发现功能,Nacos 还整合了配置中心性能的功能
+
+心跳机制：Eureka 30秒；Nacos 5秒
+
+
+
+6、
+
+Unified Modeling Language，直接翻译就是统一建模语言
+
+类与类之间的关系
+
+数据库表之间的关系
+
+
+
+7、
+
+CAP方案
+
+读操作先读缓存，有直接返回，没有再读数据库，写缓存
+
+写操作先写数据库，再删缓存
+
+延迟双删
+
+
+
+8、
+
+200 服务器已成功处理了请求
+
+3XX一般表示重定向
+
+400 请求错误
+403 服务器拒绝请求
+404 服务器找不到请求的网页
+405 禁用请求中指定的方法
+
+500 服务器遇到错误
+
+
+
+9、
+
+工厂模式 建造模式 单例模式 代理模式 策略模式 观察者模式 责任链模式
+
+
+
+10、
+
+touch 创建文件
+
+mkdir 创建目录
+
+mv 剪切
+
+cp 复制
+
+rm -rf 删除文件
+
+ip config 查看网卡信息
+
+kill -9 杀死进程
+
+vim 编辑文件
+
+top 看cpu的状态
+
+
+
+11、
+
+v-for
+
+v-for可用来遍历数组、对象、字符串
+
+v-text和v-html
+
+v-text是渲染字符串，会覆盖原先的字符串
+
+v-html可以解析html标签
+
+v-on
+
+v-on用于事件绑定
+
+v-model
+
+数据双向绑定指令
+
+
+
+12、
+
+开始创建、初始化数据、编译模板、挂载Dom、渲染、更新、销毁
+
+
+
+13、
+
+==：如果⽐较的对象是基本数据类型，则⽐较的是数值是否相等；如果⽐较的是引⽤数据类型，则⽐较的是对象的 地址值是否相等
+
+equals ⽅法：⽤来⽐较两个对象的内容是否相等。如果没 有对 equals ⽅法进⾏重写，则⽐较的是引⽤类型的变量所指向的对象的地址
+
+equals()相等的两个对象，hashcode()一定相等；
+反过来：hashcode()不等，一定能推出equals()也不等；
+hashcode()相等，equals()可能相等，也可能不等。
+
+
+
+14、
+
+bootstrap.properties -> bootstrap.yml -> application.properties -> application.yml
+
+
+
+15、
+
+controller层、service层、dao层大部分都是单例的
+
+实体类是多例 
+

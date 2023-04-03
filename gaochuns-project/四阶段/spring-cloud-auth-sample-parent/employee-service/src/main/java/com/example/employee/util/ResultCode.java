@@ -1,0 +1,67 @@
+package com.example.employee.util;
+
+public enum ResultCode {
+
+    /*
+    400 参数错误
+    401 没权限
+    403 请求方式不支持 get post
+    404 url找不到资源
+    500 内部程序错误
+    503 网关错误
+     */
+
+    /* 成功 */
+    SUCCESS(200, "成功"),
+
+    /* 默认失败 */
+    COMMON_FAIL(999, "失败"),
+
+    /* 参数错误：1000～1999 */
+    PARAM_NOT_VALID(1001, "参数无效"),
+    PARAM_IS_BLANK(1002, "参数为空"),
+    PARAM_TYPE_ERROR(1003, "参数类型错误"),
+    PARAM_NOT_COMPLETE(1004, "参数缺失"),
+
+    /* 用户错误 */
+    USER_NOT_LOGIN(2001, "用户未登录"),
+    USER_ACCOUNT_EXPIRED(2002, "账号已过期"),
+    USER_CREDENTIALS_ERROR(2003, "账号或密码错误"),
+    USER_CREDENTIALS_EXPIRED(2004, "密码过期"),
+    USER_ACCOUNT_DISABLE(2005, "账号不可用"),
+    USER_ACCOUNT_LOCKED(2006, "账号被锁定"),
+    USER_ACCOUNT_NOT_EXIST(2007, "账号不存在"),
+    USER_ACCOUNT_ALREADY_EXIST(2008, "账号已存在"),
+    USER_ACCOUNT_USE_BY_OTHERS(2009, "您的登录已经超时或者已经在另一台机器登录，您被迫下线"),
+    TOKEN_IS_NULL(2010,"TOKEN为空"),
+    TOKEN_INVALID_EXCEPTION(2011,"TOKEN非法"),
+
+    /* 鉴权错误 */
+    NO_PERMISSION(4001, "没有权限"),
+
+    /*部门错误*/
+    DEPARTMENT_NOT_EXIST(5007, "部门不存在"),
+    DEPARTMENT_ALREADY_EXIST(5008, "部门已存在"),
+
+    /*运行时异常*/
+    ARITHMETIC_EXCEPTION(9001,"算数异常"),
+    NULL_POINTER_EXCEPTION(9002,"空指针异常"),
+    ARRAY_INDEX_OUTOfBOUNDS_EXCEPTION(9003,"数组越界");
+
+
+    ResultCode(Integer code, String message){
+        this.code = code;
+        this.message = message;
+    }
+
+    private Integer code;
+    public Integer getCode() {
+        return code;
+    }
+
+    private String message;
+    public String getMessage() {
+        return message;
+    }
+
+}

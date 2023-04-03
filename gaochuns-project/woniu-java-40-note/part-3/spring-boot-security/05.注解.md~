@@ -1,0 +1,100 @@
+﻿# Spring Security 注解
+
+## 1. 注解
+
+**Spring Security 默认是禁用注解的**！<small>（ 讨厌... ）</small>
+
+要想开启注解功能需要在配置类上加入 **@EnableMethodSecurity** 注解来判断用户对某个控制层的方法是否具有访问权限。
+
+```java {2}
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+    ...
+}
+```
+
+Spring Security 支持 3 套注解：
+
+| # | 注解 |
+| :- | :- |
+| jsr250 注解 | @DenyAll、@PermitAll、@RolesAllowed |
+| secured 注解 | @Secured |
+| **prePost 注解** | @PreAuthorize、@PostAuthorize |
+
+
+## 1. PrePost 注解
+
+PrePost 注解也是 JSR250 标准出现之前，Spring Security 框架自己定义的另一套注解，目的是为了替代它之前自己定义的 Secured 注解。
+
+PrePost 注解的功能比 Secured 注解的功能更强大，它可以通过使用 Spring EL 来表达具有逻辑判断的校验规则。
+
+- **@PreAuthorize** 注解：适合进入方法前的权限验证；
+
+- **@PostAuthorize** 注解：使用并不多，在方法执行后再进行权限验证。
+
+```java{1}
+@PreAuthorize("hasRole('ADMIN')")  // 等同于前面章节的配置中的 hasRole("...")
+@RequestMapping("/admin")
+public String admin() {
+    return "admin";
+}
+```
+
+这样只要拥有 ADMIN 角色的用户才可以访问此方法。
+
+## 3. Secured 注解
+
+**@Secured** 注解是 jsr250 标准出现之前，Spring Security 框架自己定义的注解。<small>不过，可能是为了最求更灵活、更强大的功能，后面 Spring Security 框架由定义了 PrePost 注解，所以，它的使用就很少了。</small>
+
+@Secured 标注于方法上，表示只有具有它所指定的角色的用户才可以调用该方法。如果当前用户不具备所要求的角色，那么，将会抛出 **AccessDenied** 异常。
+
+```java
+// @Secured("IS_AUTHENTICATED_ANONYMOUSLY")
+// @Secured("ADMIN")
+@Secured({"USER", "ADMIN"})   // 这里可以省略前缀 ROLE_
+@RequestMapping("/admin")
+public String admin() {
+    return "admin";
+}
+```
+
+
+## 2. JSR-250 注解
+
+JSR-250 是具有 Java 官方身份的注解，不过和其他官方标准一样，它出现的时间稍晚一些<small>（ 因为要等别人去趟雷踩坑 ）</small>。
+
+```java{1,7}
+@RolesAllowed("USER") // 注意，这里是省略前缀 ROLE_ ，但数据库中角色必须以 ROLE_ 开头
+@GetMapping("/user-can-do")
+public String user() {
+    return "user can do";
+}
+
+@RolesAllowed({"USER", "ADMIN"})
+@GetMapping("/admin-can-do")
+public String admin() {
+    return "admin can do";
+}
+```
+
+**@DenyAll** 、**@PermitAll** 、**@RolesAllowed** 三个注解的功能显而易见。
+
+不过有一个容易误解的地方: `.permitAll()` 和 `.anonymous()` 的区别：
+
+::: tip 提示
+Spring Security 为了统一，给「**未登录**」的用户赋予了一个角色：**匿名<small>（ anonymouse ）</small>用户** 。
+
+也就是说，无论你有么有主动地登录，在某一时刻，你都是通过使用某个账号来使用系统的。无非就是你当下使用的是 xxx 账号，还是 yyy 账号，还是 zzz 账号，亦或者是 anonymous 帐号。
+:::
+
+配置类中的配置 `.antMatchers("/anonCanDo").anonymous()` 表示匿名用户可访问，自然也就是用户不需要登录认证即可访问该 URI 。
+
+::: warning 注意
+一旦用户经过登陆后，其身份无论在是什么，他都不再是匿名用户了，即，它失去了匿名用户这个身份。此时，如果他再去访问匿名用户可登陆的 URI 反而是显示没有权限！
+:::
+
+`.antMatchers("/", "/users").permitAll()` 就没有这个问题。它是指无论是否登陆，登陆后无论是什么身份都能访问。**所以，你心里想要表达的『匿名用户也可以访问』大概率是指 `.permitAll()`，而非 `.anonymous()` 。**
+
+
+

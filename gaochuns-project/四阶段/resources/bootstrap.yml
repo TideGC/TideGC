@@ -1,0 +1,21 @@
+ribbon:
+    MaxAutoRetries: 2
+    MaxAutoRetriesNextServer: 2
+    OkToRetryOnAllOperations: false
+    ReadTimeout: 5000
+server:
+    port: 9999
+spring:
+    application:
+        name: gateway-service-1
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true
+        nacos:
+            discovery:
+#                group: two
+#                namespace: 59ca44d5-abf4-4a62-9d65-dfdbcc55e2bc
+                password: nacos
+                username: nacos

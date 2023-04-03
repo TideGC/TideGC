@@ -1,0 +1,17 @@
+### 成功
+POST http://127.0.0.1:10000/auth-service/login
+Content-Type: application/x-www-form-urlencoded
+
+username=tommy&password=123456
+
+### 失败
+POST http://127.0.0.1:10000/auth-service/login
+Content-Type: application/x-www-form-urlencoded
+
+username=jerry&password=123456
+
+###
+
+GET http://127.0.0.1:10000/department-service/hello-world
+x-jwt-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImplcnJ5In0.4yUigm8FHwmb1dwDElQjMkWRH-tIIBoRZ1SmeN5IURk
+

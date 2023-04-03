@@ -1,0 +1,9 @@
+{
+  "promptDelete": false,
+  "readableLineLength": false,
+  "useTab": true,
+  "foldHeading": true,
+  "strictLineBreaks": false,
+  "smartIndentList": true,
+  "autoPairMarkdown": true
+}

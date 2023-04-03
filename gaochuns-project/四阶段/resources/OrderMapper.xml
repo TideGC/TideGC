@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--dao接口的位置-->
+<mapper namespace="com.woniu.mall.mapper.OrderMapper">
+<!--   dao接口的方法参数   通过实体类全名确定对象类型-->
+    <insert id="add" parameterType="Order" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into mall_order (no, userid, ordertime, paytype, paytime, receivetime, totalmoney, address, accept,
+                                telephone, status)
+        values (#{no}, #{user.id}, #{ordertime}, #{paytype}, #{paytime}, #{receivetime}, #{totalmoney}, #{address},
+                #{accept}, #{telephone}, #{status})
+    </insert>
+
+
+
+
+    <resultMap id="orderResultMap" type="Order">
+        <id column="id" property="id" />
+        <result column="no" property="no" />
+        <result column="ordertime" property="ordertime" />
+        <result column="accept" property="accept" />
+        <result column="telephone" property="telephone" />
+        <result column="address" property="address" />
+        <result column="totalmoney" property="totalmoney" />
+        <result column="status" property="status" />
+<!--        一对一-->
+        <association property="user" javaType="User">
+            <id column="userid" property="id" />
+            <result column="account" property="account" />
+        </association>
+<!--        一对多-->
+        <collection property="orderItemList" ofType="OrderItem">
+            <id column="oiid" property="id" />
+            <result column="price" property="price" />
+            <result column="num" property="num" />
+
+            <association property="goods" javaType="Goods" >
+                <id column="goodsid" property="id" />
+                <result column="name" property="name" />
+                <result column="image" property="image" />
+            </association>
+        </collection>
+
+    </resultMap>
+
+    <select id="getById" resultMap="orderResultMap">
+    select o.*,u.account,oi.id oiid,oi.goodsid,oi.price,oi.num,g.name,g.image
+    from mall_order o inner join mall_user u on o.userid=u.id
+                      inner join mall_order_item oi on o.id=oi.orderid
+                      inner join mall_goods g on oi.goodsid=g.id
+    where o.id=#{orderid}
+    </select>
+
+
+
+    <resultMap id="orderResultMapTwo" type="Order">
+        <id column="id" property="id" />
+        <result column="no" property="no" />
+        <result column="ordertime" property="ordertime" />
+        <result column="accept" property="accept" />
+        <result column="telephone" property="telephone" />
+        <result column="address" property="address" />
+        <result column="totalmoney" property="totalmoney" />
+        <result column="status" property="status" />
+
+
+        <association property="user" column="userid"
+                     select="com.woniu.mall.mapper.UserMapper.getById" />
+        <collection property="orderItemList" column="id"
+                    select="com.woniu.mall.mapper.OrderItemMapper.findOrderItemByOrderId" />
+
+    </resultMap>
+
+
+
+    <select id="getAll" resultMap="orderResultMapTwo">
+        select * from mall_order
+    </select>
+
+
+
+    <resultMap id="orderResultMap3" type="Order">
+         <result column="account" property="user.account" />
+    </resultMap>
+
+    <select id="getOrder" resultMap="orderResultMap3" parameterType="Order">
+    select o.*,u.account
+    from mall_order o inner join mall_user u on o.userid=u.id
+        where 1=1
+        <if test="user!=null and user.account!=null and user.account!='' ">
+            and u.account like concat('%',#{user.account},'%')
+        </if>
+        <if test="ordertime1!=null and ordertime1!='' ">
+            and ordertime &gt;=#{ordertime1}
+        </if>
+        <if test="ordertime2!=null and ordertime2!='' ">
+            and ordertime &lt;=#{ordertime2}
+        </if>
+        <if test="status!=null and status!=''">
+            and o.status=#{status}
+        </if>
+    </select>
+
+</mapper>

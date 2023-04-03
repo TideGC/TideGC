@@ -1,0 +1,9 @@
+### 成功
+POST http://127.0.0.1:6666/login
+Content-Type: application/x-www-form-urlencoded
+
+username=tommy&password=123456
+
+###
+GET http://127.0.0.1:9090/hello-world
+x-jwt-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRvbW15In0.pV5Z6_gWeF7rWwtaSUvzZDBo5bgtZqSI7XMKOGjx5Lk

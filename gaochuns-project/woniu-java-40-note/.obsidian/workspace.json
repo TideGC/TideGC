@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "c27ccc7b3bf989bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f2ff124ea2585db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c984d2d33feae446",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "interview/03.集合框架.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "020bb7906598e0d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6573cb5c94ced591",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a605f337074e6f4c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "72c1630ada812b8c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8e9d4318dddba233",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 305.500732421875
+  },
+  "right": {
+    "id": "380f5cf9aa1176bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "73ceded57f9ff040",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "85edcdf9909339f3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "interview/03.集合框架.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f826ca754b798f1c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "interview/03.集合框架.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b245fc646badb1fc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1a11e9df4e5cffdf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "interview/03.集合框架.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "c984d2d33feae446",
+  "lastOpenFiles": [
+    "interview/02.线程.md",
+    "interview/01.ArraySort.md",
+    "interview/04.spring.md",
+    "part-1/java/basic/01.Java语法汇总.md",
+    "interview/10.mysql.md",
+    "part-1/java/jvm/01.JVM内存布局.md",
+    "part-0/utility/jdk/jdk-all-in-one.md",
+    "part-1/java/jvm/02.Java引用的强软弱虚.md",
+    "part-1/java/java-all-in-one.md",
+    "interview/z02.synchronized.md"
+  ]
+}
