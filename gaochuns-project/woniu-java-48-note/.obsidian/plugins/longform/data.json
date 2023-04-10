@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "projects": {},
+  "selectedDraftVaultPath": "300-Area/nexus/longform/Index.md",
+  "userScriptFolder": null,
+  "sessionStorage": "data",
+  "sessions": [
+    {
+      "start": "2023-03-03T09:35:07.349Z",
+      "total": 0,
+      "drafts": {
+        "300-Area/nexus/nexus/Index.md": {
+          "total": 0,
+          "scenes": {
+            "第一章": 0,
+            "第二章": 0,
+            "第三章": 0
+          }
+        },
+        "300-Area/nexus/nexus.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "300-Area/nexus/longform/Index.md": {
+          "total": 0,
+          "scenes": {
+            "1. 搭建私服的优点": 0,
+            "2. 关于 Nexus": 0,
+            "3. 使用二进制发行包安装和运行": 0,
+            "4. 使用 docker 安装和运行": 0,
+            "5. Nexus 服务的配置": 0,
+            "6. Nexus 的 Maven 仓库": 0
+          }
+        },
+        "300-Area/nexus/test/Index.md": {
+          "total": 0,
+          "scenes": {}
+        }
+      }
+    }
+  ],
+  "showWordCountInStatusBar": true,
+  "startNewSessionEachDay": true,
+  "sessionGoal": 500,
+  "applyGoalTo": "all",
+  "notifyOnGoal": true,
+  "countDeletionsForGoal": false,
+  "keepSessionCount": 30,
+  "sessionFile": "longform-sessions.json",
+  "numberScenes": false,
+  "workflows": {
+    "Default Workflow": {
+      "name": "Default Workflow",
+      "description": "A starter workflow. Feel free to edit, rename, or delete it and create your own.",
+      "steps": [
+        {
+          "id": "strip-frontmatter",
+          "optionValues": {}
+        },
+        {
+          "id": "remove-links",
+          "optionValues": {
+            "remove-wikilinks": true,
+            "remove-external-links": true
+          }
+        },
+        {
+          "id": "prepend-title",
+          "optionValues": {
+            "format": "$3{#} $1",
+            "separator": "\n\n"
+          }
+        },
+        {
+          "id": "concatenate-text",
+          "optionValues": {
+            "separator": "\\n\\n---\\n\\n"
+          }
+        },
+        {
+          "id": "write-to-note",
+          "optionValues": {
+            "target": "manuscript.md",
+            "open-after": true
+          }
+        }
+      ]
+    }
+  }
+}

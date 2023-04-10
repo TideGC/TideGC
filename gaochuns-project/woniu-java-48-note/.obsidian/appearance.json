@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "cssTheme": "GitHub Theme",
+  "theme": "moonstone",
+  "interfaceFontFamily": "苹方",
+  "textFontFamily": "Maple Mono SC NF",
+  "monospaceFontFamily": "Maple Mono SC NF",
+  "enabledCssSnippets": [
+    "MCL Multi Column",
+    "temp"
+  ],
+  "baseFontSize": 12
+}

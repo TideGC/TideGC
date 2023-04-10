@@ -1,0 +1,71 @@
+.markdown-preview-view h1:hover::after,
+.is-live-preview .HyperMD-header-1:hover::after {
+  content: 'H1';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}
+
+.markdown-preview-view h2:hover::after,
+.is-live-preview .HyperMD-header-2:hover::after {
+  content: 'H2';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}
+
+.markdown-preview-view h3:hover::after,
+.is-live-preview .HyperMD-header-3:hover::after {
+  content: 'H3';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}
+
+.markdown-preview-view h4:hover::after,
+.is-live-preview .HyperMD-header-4:hover::after {
+  content: 'H4';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}
+
+.markdown-preview-view h5:hover::after,
+.is-live-preview .HyperMD-header-5:hover::after {
+  content: 'H5';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}
+
+.markdown-preview-view h6:hover::after,
+.is-live-preview .HyperMD-header-6:hover::after {
+  content: 'H6';
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 0px;
+}

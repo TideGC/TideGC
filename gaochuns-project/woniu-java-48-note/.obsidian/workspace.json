@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "e1ecb2f7b986d8c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "191daa5e794535c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e66fc3d5ccfd313",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "part-4/微服务/微服务.MOC.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "18eea5165d825c73",
+    "type": "split",
+    "children": [
+      {
+        "id": "324babd87b9424cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30ea565ae803b8ab",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f628ae0847cfd548",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "随机",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.5
+  },
+  "right": {
+    "id": "9b3dab2ff8f3e966",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ff3762166787756",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a441d387de5ce0b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "da8981a9691119fe",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "part-4/微服务/微服务.MOC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9bb158e592bd34c1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "zk-prefixer:创建时间戳笔记": false
+    }
+  },
+  "active": "0e66fc3d5ccfd313",
+  "lastOpenFiles": [
+    "part-4/part-4.目录.md",
+    "总.目录.md",
+    "part-4/redisson/redisson.MOC.md",
+    "part-4/redisson/gist/202211090821.md",
+    "400-Project/woniu-java-00-note/part-4/微服务/微服务.MOC.md",
+    "400-Project/woniu-java-00-note/part-4/part-4.目录.md",
+    "400-Project/interview/01.ArraySort.md",
+    "100-Archive/晨考/202302220903.md",
+    "100-Archive/晨考/202302210910.md",
+    "100-Archive/晨考/202212301745.md",
+    "100-Archive/晨考/202207161356.md",
+    "100-Archive/晨考/202302200818.md",
+    "400-Project/daily/2023-04-04.md",
+    "400-Project/woniu-java-00-note/part-0/uml/00-plantuml.md",
+    "200-Resource/ddd/DCI 模式.md",
+    "200-Resource/ddd/DCI 实践.md",
+    "200-Resource/ddd/应用架构的演变.md",
+    "200-Resource/ddd/ddd概念随笔.md",
+    "300-Area/nexus/gist/202303022324.md",
+    "300-Area/nexus/gist/202302271845.md",
+    "300-Area/nexus/gist/202302152021.md",
+    "300-Area/nexus/gist/202302152105.md",
+    "300-Area/nexus/gist/202302151613.md",
+    "300-Area/nexus/gist/6. Nexus 的 Maven 仓库.md",
+    "300-Area/nexus/gist/5. Nexus 服务的配置.md",
+    "300-Area/nexus/gist/4. 使用 docker 安装和运行.md",
+    "400-Project/daily",
+    "400-Project/woniu-java-00-note/part-0/规范和模板/99-naming.md~refs/remotes/origin/main",
+    "400-Project/woniu-java-00-note/part-0/规范和模板/99-naming.md~refs/remotes/origin",
+    "400-Project/woniu-java-00-note/part-0/规范和模板/99-naming.md~refs/remotes",
+    "400-Project/woniu-java-00-note/part-0/规范和模板/99-naming.md~refs",
+    "200-Resource/202301261618.md~refs/remotes/origin/main",
+    "200-Resource/202301261618.md~refs/remotes/origin",
+    "200-Resource/202301261618.md~refs/remotes",
+    "200-Resource/202301261618.md~refs",
+    "200-Resource/mybatis"
+  ]
+}

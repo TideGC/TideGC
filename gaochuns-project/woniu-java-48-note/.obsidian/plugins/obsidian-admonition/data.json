@@ -1,0 +1,102 @@
+{
+  "userAdmonitions": {
+    "js": {
+      "type": "js",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "node-js",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "JavaScript 代码",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "html": {
+      "type": "html",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "html5",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "HTML 代码",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "vue": {
+      "type": "vue",
+      "color": "201, 201, 201",
+      "icon": {
+        "name": "vuejs",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Vue 代码",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "css": {
+      "type": "css",
+      "color": "204, 204, 204",
+      "icon": {
+        "name": "css3",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "CSS 代码",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "code": {
+      "type": "code",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "code",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "code",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "sql": {
+      "type": "sql",
+      "color": "200, 200, 200",
+      "icon": {
+        "name": "database",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "SQL",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    }
+  },
+  "syntaxHighlight": false,
+  "copyButton": false,
+  "version": "9.2.1",
+  "autoCollapse": false,
+  "defaultCollapseType": "open",
+  "injectColor": true,
+  "parseTitles": true,
+  "dropShadow": false,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": false,
+    "icons": true,
+    "other": false,
+    "advanced": true
+  },
+  "icons": [],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": false,
+  "msDocConverted": false,
+  "useSnippet": false,
+  "snippetPath": "custom-admonitions.20f50b"
+}

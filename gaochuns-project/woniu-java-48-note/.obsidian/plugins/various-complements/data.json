@@ -1,0 +1,263 @@
+{
+  "strategy": "english-only",
+  "matchStrategy": "prefix",
+  "maxNumberOfSuggestions": 5,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 0,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 0,
+  "disableSuggestionsDuringImeOn": false,
+  "insertAfterCompletion": true,
+  "firstCharactersDisableSuggestions": ":/^",
+  "showMatchStrategy": true,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": true,
+  "descriptionOnSuggestion": "Short",
+  "selectSuggestionKeys": "Enter",
+  "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
+  "openSourceFileKey": "None",
+  "propagateEsc": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": false,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": true,
+  "customDictionaryPaths": "dics/dict.md",
+  "columnDelimiter": "Pipe",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "+=",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "=>",
+  "caretLocationSymbolAfterComplement": "$END$",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": false,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "co-inf": {
+      "co-inf": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1677539448593
+        }
+      }
+    },
+    "coin": {
+      "coin": {
+        "customDictionary": {
+          "count": 3,
+          "lastUpdated": 1677540432152
+        }
+      }
+    },
+    "col": {
+      "col": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677539536972
+        }
+      }
+    },
+    "co-info": {
+      "co-info": {
+        "currentFile": {
+          "count": 5,
+          "lastUpdated": 1677540424660
+        }
+      }
+    },
+    "Looks": {
+      "Looks": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677539725414
+        }
+      }
+    },
+    "lgtm": {
+      "Looks good to me": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677540390456
+        }
+      }
+    },
+    "coi": {
+      "co-info": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1677540527109
+        }
+      }
+    },
+    "bg-green": {
+      "bg-green": {
+        "customDictionary": {
+          "count": 8,
+          "lastUpdated": 1677843316410
+        }
+      }
+    },
+    "bg-yellow": {
+      "bg-yellow": {
+        "customDictionary": {
+          "count": 4,
+          "lastUpdated": 1677745515506
+        }
+      }
+    },
+    "cl-green": {
+      "cl-green": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677563702409
+        }
+      }
+    },
+    "mk-green": {
+      "mk-green": {
+        "customDictionary": {
+          "count": 3,
+          "lastUpdated": 1677843325017
+        }
+      }
+    },
+    "bg-red": {
+      "bg-red": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1677563870401
+        },
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1677745652864
+        }
+      }
+    },
+    "bg-gray": {
+      "bg-gray": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677563906050
+        }
+      }
+    },
+    "cl-yellow": {
+      "cl-yellow": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677563944583
+        }
+      }
+    },
+    "mk-blue": {
+      "mk-blue": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677565408521
+        }
+      }
+    },
+    "mk-pink": {
+      "mk-pink": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677733527612
+        }
+      }
+    },
+    "bg-orange": {
+      "bg-orange": {
+        "customDictionary": {
+          "count": 6,
+          "lastUpdated": 1677745346498
+        }
+      }
+    },
+    "mk-brown": {
+      "mk-brown": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1677843207500
+        }
+      }
+    },
+    "bg-blue": {
+      "bg-blue": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1677745406980
+        }
+      }
+    },
+    "success": {
+      "success": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1677745789404
+        }
+      }
+    },
+    "patch": {
+      "patch": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1677758671242
+        }
+      }
+    },
+    "晨考": {
+      "晨考": {
+        "frontMatter": {
+          "count": 2,
+          "lastUpdated": 1677808432828
+        }
+      }
+    },
+    "gitlab": {
+      "gitlab": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1677808438346
+        }
+      }
+    },
+    "cherry-pick": {
+      "cherry-pick": {
+        "currentFile": {
+          "count": 3,
+          "lastUpdated": 1677843258850
+        }
+      }
+    },
+    "jenkins": {
+      "jenkins": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1677856065603
+        }
+      }
+    },
+    "ruoyi": {
+      "ruoyi": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1677856090175
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+## 模板
+
+```text
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Other ###
+HELP.md
+*.log
+```

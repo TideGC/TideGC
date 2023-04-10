@@ -1,0 +1,12 @@
+.callout[data-callout="dice-1"] {
+    --callout-icon: lucide-dice-1;
+}
+
+.callout[data-callout="dice-2"] {
+    --callout-icon: lucide-dice-2;
+    background-color: #BBFABBA6;
+}
+
+.callout[data-callout="dice-3"] {
+    --callout-icon: lucide-dice-3;
+}

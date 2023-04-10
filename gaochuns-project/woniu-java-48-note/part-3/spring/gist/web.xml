@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+   xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+    http://xmlns.jcp.org/xml/ns/javaee > 
+    http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1">
+ 
+  <display-name>Archetype Created Web Application</display-name>
+ 
+  <listener>
+    <listener-class>
+      org.springframework.web.context.ContextLoaderListener
+    </listener-class>
+  </listener>
+
+  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value><!-- 相较于 XML 配置，Java 代码配置『多』一个这个 -->
+      org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+       com.example.config.SpringServiceConfig,
+       com.example.config.SpringDaoConfig
+     </param-value>
+  </context-param>
+ 
+   <servlet>
+    <servlet-name>HelloWeb</servlet-name>
+    <servlet-class>
+       org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <init-param><!-- 这个是『多』出来的一个 -->
+      <param-name>contextClass</param-name>
+      <param-value>
+        org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.example.config.SpringWebConfig</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>HelloWeb</servlet-name>
+    <url-pattern>*.do</url-pattern> <!--    后缀拦截 -->
+  </servlet-mapping>                  <!-- /  默认/兜底拦截 -->
+</web-app>                              <!-- /* 路径拦截，拦截所有请求-->
